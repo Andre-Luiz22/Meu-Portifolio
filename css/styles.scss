@@ -1,0 +1,41 @@
+/* Reset Css*/
+:root {
+  --background-color: #090e16;
+  --icones-color: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  scroll-behavior: smooth;
+  padding: 15px 7px;
+  background-color: var(--background-color);
+}
+
+header {
+  .nav-mobile {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    .nav-mob-item {
+      background-color: var(--icones-color);
+      opacity: 50%;
+      border-radius: 50%;
+      padding: 0.3rem;
+    }
+
+    .github {
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+
+  .nav-pc {
+    display: none;
+  }
+}
