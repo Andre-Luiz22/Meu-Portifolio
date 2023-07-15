@@ -1,9 +1,12 @@
+@charset "UTF-8";
 /* Reset Css*/
 :root {
   --background-color: #090e16;
   --icones-color: #ffffff;
+  --cor-roda-avatar: #7b4ae2;
 }
 
+/*Reset Básico*/
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +20,10 @@ html {
   background-color: var(--background-color);
 }
 
+/*Início da estilização do header*/
+header {
+  background-color: transparent;
+}
 header .nav-mobile {
   display: flex;
   justify-content: center;
@@ -24,7 +31,7 @@ header .nav-mobile {
 }
 header .nav-mobile .nav-mob-item {
   background-color: var(--icones-color);
-  opacity: 50%;
+  opacity: 0.5;
   border-radius: 50%;
   padding: 0.3rem;
 }
@@ -34,4 +41,78 @@ header .nav-mobile .github {
 }
 header .nav-pc {
   display: none;
+}
+
+/*Fim da estilização do header*/
+/*Início da estilização do container do avatar*/
+.container-avatar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.container-avatar .circulo {
+  width: 220px;
+  height: 220px;
+  position: absolute;
+  top: 0;
+  background-color: var(--cor-roda-avatar);
+  opacity: 0.2;
+  border-radius: 50%;
+  box-shadow: 0px 0px 89px -14px var(--cor-roda-avatar), 0px 0px 47px -6px var(--cor-roda-avatar);
+  z-index: 1;
+  animation: gira-roda-avatar linear 30s 0s infinite;
+}
+.container-avatar .circulo .item-avatar {
+  background-color: var(--background-color);
+  display: inline-block;
+  padding: 0.4rem 0.5rem;
+  position: absolute;
+  border-radius: 50%;
+  opacity: 1;
+}
+.container-avatar .circulo .item-avatar i {
+  color: var(--cor-roda-avatar);
+  font-size: 1.5rem;
+}
+.container-avatar .circulo .python {
+  right: -12px;
+  top: 50%;
+}
+.container-avatar .circulo .js {
+  top: 0px;
+  right: 25%;
+}
+.container-avatar .circulo .css {
+  bottom: 10%;
+  left: 0;
+  padding: 0.4rem 0.6rem;
+}
+.container-avatar .circulo .html {
+  top: 15%;
+  left: 10%;
+  padding: 0.4rem 0.6rem;
+}
+.container-avatar .circulo .git {
+  bottom: 0;
+  right: 16px;
+}
+.container-avatar .avatar {
+  display: flex;
+  justify-content: center;
+  z-index: 3;
+}
+.container-avatar .avatar img {
+  width: 60%;
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+}
+
+@keyframes gira-roda-avatar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=styles.css.map */
