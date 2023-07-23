@@ -407,6 +407,7 @@ header .nav-pc {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  margin-bottom: 5rem;
 }
 .portfolio-container .titulo-portfolio {
   display: flex;
@@ -528,6 +529,9 @@ header .nav-pc {
 .portfolio-container .filtro-carr-proj-btn-m .proj-carr-view .proj-carr .carr-item:hover .texto-item-carr p {
   opacity: 1;
 }
+.portfolio-container .filtro-carr-proj-btn-m .proj-carr-view::-webkit-scrollbar {
+  display: none;
+}
 .portfolio-container .filtro-carr-proj-btn-m .btn-m {
   width: -moz-fit-content;
   width: fit-content;
@@ -548,6 +552,112 @@ header .nav-pc {
 }
 .portfolio-container .filtro-carr-proj-btn-m .btn-m:hover {
   background-color: var(--cor-roda-avatar-opacidade);
+}
+
+.habilidades {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.habilidades .titulo-habilidades {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.habilidades .titulo-habilidades .bloquinho-habilidades {
+  color: var(--cor-roda-avatar);
+  background-color: var(--cor-roda-avatar-opacidade);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid var(--cor-roda-avatar);
+  border-radius: 0.3rem;
+}
+.habilidades .titulo-habilidades .bloquinho-habilidades i {
+  font-size: 1.3rem;
+  text-shadow: 0px 0px 3px var(--cor-roda-avatar);
+}
+.habilidades .titulo-habilidades .bloquinho-habilidades h6 {
+  font-size: 1rem;
+  font-weight: 900;
+}
+.habilidades .titulo-habilidades .tecnologias-habilidades {
+  color: var(--cor-nome-saudacao);
+}
+.habilidades .titulo-habilidades .tecnologias-habilidades h2 {
+  font-weight: 800;
+  font-size: 2rem;
+}
+.habilidades .linguagens {
+  color: var(--cor-nome-saudacao);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.habilidades .linguagens .conheco {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.habilidades .linguagens .conheco p {
+  opacity: 0.6;
+  font-size: 1.25rem;
+}
+.habilidades .linguagens .conheco .l-conheco-view {
+  width: 100%;
+  overflow-x: auto;
+}
+.habilidades .linguagens .conheco .l-conheco-view .l-conheco {
+  display: flex;
+  gap: 1rem;
+}
+.habilidades .linguagens .conheco .l-conheco-view .l-conheco i {
+  transition: 0.5s;
+  font-size: 3.5rem;
+  color: var(--cor-roda-avatar);
+  text-shadow: 0px 0px 3px var(--cor-roda-avatar);
+  opacity: 0.5;
+}
+.habilidades .linguagens .conheco .l-conheco-view .l-conheco i:hover {
+  opacity: 1;
+}
+.habilidades .linguagens .conheco .l-conheco-view::-webkit-scrollbar {
+  display: none;
+}
+.habilidades .linguagens .vou-aprender {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.habilidades .linguagens .vou-aprender p {
+  opacity: 0.6;
+  font-size: 1.25rem;
+}
+.habilidades .linguagens .vou-aprender .l-vou-aprender-view {
+  width: 100%;
+  overflow-x: auto;
+}
+.habilidades .linguagens .vou-aprender .l-vou-aprender-view .l-vou-aprender {
+  display: flex;
+  gap: 1rem;
+}
+.habilidades .linguagens .vou-aprender .l-vou-aprender-view .l-vou-aprender i {
+  transition: 0.5s;
+  font-size: 3.5rem;
+  color: var(--cor-roda-avatar);
+  text-shadow: 0px 0px 3px var(--cor-roda-avatar);
+  opacity: 0.5;
+}
+.habilidades .linguagens .vou-aprender .l-vou-aprender-view .l-vou-aprender i:hover {
+  opacity: 1;
+}
+.habilidades .linguagens .vou-aprender .l-vou-aprender-view::-webkit-scrollbar {
+  display: none;
 }
 
 @keyframes gira-roda-avatar {
