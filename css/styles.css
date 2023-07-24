@@ -19,12 +19,13 @@
 body,
 html {
   scroll-behavior: smooth;
-  padding: 15px 7px;
+  padding-top: 15px;
   background-color: var(--background-color);
 }
 
 /*Início da estilização do header*/
 header {
+  margin: 0 15px;
   background-color: transparent;
 }
 header .nav-mobile {
@@ -52,6 +53,7 @@ header .nav-pc {
 /*Fim da estilização do header*/
 /*Início da estilização do container do avatar*/
 .container-avatar {
+  margin: 0 15px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -115,6 +117,7 @@ header .nav-pc {
 }
 
 .section-saudacao {
+  margin: 0 15px;
   display: flex;
   flex-direction: column;
   font-family: "Raleway", sans-serif;
@@ -182,7 +185,7 @@ header .nav-pc {
 }
 
 .experiencia {
-  margin: 4rem 0;
+  margin: 4rem 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -333,7 +336,7 @@ header .nav-pc {
   flex-direction: column;
   gap: 2rem;
   font-family: "Raleway", sans-serif;
-  margin-bottom: 5rem;
+  margin: 0 15px 5rem 15px;
 }
 .sobre-mim .sobre-mim-img img {
   border-radius: 100%;
@@ -407,7 +410,7 @@ header .nav-pc {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  margin-bottom: 5rem;
+  margin: 0 15px 5rem 15px;
 }
 .portfolio-container .titulo-portfolio {
   display: flex;
@@ -484,6 +487,7 @@ header .nav-pc {
   gap: 1rem;
 }
 .portfolio-container .filtro-carr-proj-btn-m .proj-carr-view .proj-carr .carr-item {
+  cursor: pointer;
   border-radius: 15px;
   border: 2px solid var(--cor-roda-avatar);
   padding: 1rem;
@@ -559,6 +563,7 @@ header .nav-pc {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  margin: 0 15px 5rem 15px;
 }
 .habilidades .titulo-habilidades {
   display: flex;
@@ -658,6 +663,301 @@ header .nav-pc {
 }
 .habilidades .linguagens .vou-aprender .l-vou-aprender-view::-webkit-scrollbar {
   display: none;
+}
+
+.trajetoria {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 0 15px 5rem 15px;
+}
+.trajetoria .titulo-trajetoria {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.trajetoria .titulo-trajetoria .bloquinho-trajetoria {
+  color: var(--cor-roda-avatar);
+  background-color: var(--cor-roda-avatar-opacidade);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid var(--cor-roda-avatar);
+  border-radius: 0.3rem;
+}
+.trajetoria .titulo-trajetoria .bloquinho-trajetoria i {
+  font-size: 1.3rem;
+  text-shadow: 0px 0px 3px var(--cor-roda-avatar);
+}
+.trajetoria .titulo-trajetoria .bloquinho-trajetoria h6 {
+  font-size: 1rem;
+  font-weight: 900;
+}
+.trajetoria .titulo-trajetoria .trajetoria-ate-aqui {
+  color: var(--cor-nome-saudacao);
+}
+.trajetoria .titulo-trajetoria .trajetoria-ate-aqui h2 {
+  font-weight: 800;
+  font-size: 2rem;
+}
+.trajetoria .area-profissional {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.trajetoria .area-profissional .titulo-data {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--cor-nome-saudacao);
+}
+.trajetoria .area-profissional .titulo-data h3 {
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+.trajetoria .area-profissional .titulo-data p {
+  opacity: 0.6;
+  font-size: 0.8rem;
+}
+.trajetoria .area-profissional .area-profissional-view {
+  width: 100%;
+  overflow-x: auto;
+}
+.trajetoria .area-profissional .area-profissional-view .area-profissional-carr {
+  display: flex;
+  gap: 1rem;
+}
+.trajetoria .area-profissional .area-profissional-view .area-profissional-carr .profissional-item {
+  padding: 0.8rem;
+  min-width: 280px;
+  max-width: 280px;
+  border: 1px solid var(--cor-roda-avatar);
+  border-radius: 10px;
+}
+.trajetoria .area-profissional .area-profissional-view .area-profissional-carr .profissional-item .content {
+  color: var(--cor-nome-saudacao);
+}
+.trajetoria .area-profissional .area-profissional-view .area-profissional-carr .profissional-item .content h6 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.trajetoria .area-profissional .area-profissional-view .area-profissional-carr .profissional-item .content p {
+  opacity: 0.6;
+  font-size: 0.8rem;
+}
+.trajetoria .area-profissional .area-profissional-view .area-profissional-carr .profissional-item .periodo {
+  display: flex;
+  justify-content: space-between;
+}
+.trajetoria .area-profissional .area-profissional-view .area-profissional-carr .profissional-item .periodo .meses {
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--cor-roda-avatar);
+}
+.trajetoria .area-profissional .area-profissional-view .area-profissional-carr .profissional-item .periodo .data {
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--cor-roda-avatar);
+}
+.trajetoria .area-profissional .area-profissional-view::-webkit-scrollbar {
+  display: none;
+}
+.trajetoria .area-academica {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.trajetoria .area-academica .titulo-data {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--cor-nome-saudacao);
+}
+.trajetoria .area-academica .titulo-data h3 {
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+.trajetoria .area-academica .titulo-data p {
+  opacity: 0.6;
+  font-size: 0.8rem;
+}
+.trajetoria .area-academica .area-academica-view {
+  width: 100%;
+  overflow-x: auto;
+}
+.trajetoria .area-academica .area-academica-view .area-academica-carr {
+  display: flex;
+  gap: 1rem;
+}
+.trajetoria .area-academica .area-academica-view .area-academica-carr .academico-item {
+  padding: 0.8rem;
+  min-width: 280px;
+  max-width: 280px;
+  border: 1px solid var(--cor-roda-avatar);
+  border-radius: 10px;
+}
+.trajetoria .area-academica .area-academica-view .area-academica-carr .academico-item .content {
+  color: var(--cor-nome-saudacao);
+}
+.trajetoria .area-academica .area-academica-view .area-academica-carr .academico-item .content h6 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.trajetoria .area-academica .area-academica-view .area-academica-carr .academico-item .content p {
+  opacity: 0.6;
+  font-size: 0.8rem;
+}
+.trajetoria .area-academica .area-academica-view .area-academica-carr .academico-item .periodo {
+  display: flex;
+  justify-content: space-between;
+}
+.trajetoria .area-academica .area-academica-view .area-academica-carr .academico-item .periodo .meses {
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--cor-roda-avatar);
+}
+.trajetoria .area-academica .area-academica-view .area-academica-carr .academico-item .periodo .data {
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--cor-roda-avatar);
+}
+.trajetoria .area-academica .area-academica-view::-webkit-scrollbar {
+  display: none;
+}
+
+.contato {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 0 15px 5rem 15px;
+}
+.contato .titulo-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contato .titulo-contato .bloquinho-contato {
+  color: var(--cor-roda-avatar);
+  background-color: var(--cor-roda-avatar-opacidade);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid var(--cor-roda-avatar);
+  border-radius: 0.3rem;
+}
+.contato .titulo-contato .bloquinho-contato i {
+  font-size: 1.3rem;
+  text-shadow: 0px 0px 3px var(--cor-roda-avatar);
+}
+.contato .titulo-contato .bloquinho-contato h6 {
+  font-size: 1rem;
+  font-weight: 900;
+}
+.contato .titulo-contato .entre-em-contato {
+  color: var(--cor-nome-saudacao);
+}
+.contato .titulo-contato .entre-em-contato h2 {
+  font-weight: 800;
+  font-size: 2rem;
+}
+.contato .me-contate {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.contato .me-contate .wpp {
+  width: -moz-fit-content;
+  width: fit-content;
+  color: var(--cor-roda-avatar);
+  opacity: 0.5;
+  padding: 0.5rem;
+  border: 1px solid var(--cor-roda-avatar);
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.contato .me-contate .wpp:hover {
+  opacity: 1;
+}
+.contato .me-contate .email {
+  color: var(--cor-roda-avatar);
+}
+.contato .me-contate .email i {
+  font-size: 1.7rem;
+  opacity: 0.5;
+}
+.contato .me-contate .email .copia-email h6 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.contato .me-contate .email .copia-email p {
+  font-size: 1.1rem;
+  color: var(--cor-nome-saudacao);
+}
+.contato .me-contate .email .copia-email p i {
+  color: var(--cor-roda-avatar);
+  opacity: 0.5;
+}
+.contato .me-contate .email .copia-email p i:hover {
+  opacity: 1;
+}
+.contato .me-contate .voltar-topo {
+  color: var(--cor-roda-avatar);
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0.5;
+}
+.contato .me-contate .voltar-topo span {
+  font-weight: 700;
+}
+.contato .me-contate .voltar-topo:hover {
+  opacity: 1;
+}
+
+footer {
+  font-family: "Raleway", sans-serif;
+  align-items: center;
+  padding: 1rem 0;
+  background-color: var(--cor-roda-avatar-opacidade);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+footer .links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+footer .links .nav-mob-item {
+  background-color: var(--icones-color);
+  opacity: 0.5;
+  border-radius: 100%;
+  padding: 0.3rem 0.4rem;
+}
+footer .links .nav-mob-item i {
+  color: var(--background-color);
+  font-size: 24px;
+}
+footer .links .nav-mob-item .linkedin {
+  padding: 0.3rem calc(0.3rem + 4px);
+}
+footer p {
+  color: var(--cor-nome-saudacao);
+  opacity: 0.6;
+  font-size: 0.9rem;
 }
 
 @keyframes gira-roda-avatar {
