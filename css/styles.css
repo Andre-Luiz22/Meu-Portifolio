@@ -80,6 +80,9 @@ header .nav-mobile .theme-switch__container {
   box-shadow: 0em -0.062em 0.062em rgba(0, 0, 0, 0.25), 0em 0.062em 0.125em rgba(255, 255, 255, 0.94);
   transition: var(--transition);
   position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 header .nav-mobile .theme-switch__container::before {
   content: "";
