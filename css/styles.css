@@ -209,6 +209,9 @@ header .nav-mobile .nav-mob-item i {
 header .nav-mobile .nav-mob-item .linkedin {
   padding: 0.3rem calc(0.3rem + 4px);
 }
+header .nav-mobile .nav-mob-item:hover {
+  opacity: 1;
+}
 header .nav-pc {
   display: none;
 }
@@ -342,6 +345,10 @@ header .nav-pc {
   border-radius: 7px;
   cursor: pointer;
   transition: 0.5s;
+}
+.section-saudacao .baixa-cv_wpp .wpp a {
+  text-decoration: none;
+  color: var(--cor-principal);
 }
 .section-saudacao .baixa-cv_wpp .wpp:hover {
   opacity: 1;
@@ -895,7 +902,23 @@ header .nav-pc {
   display: flex;
   gap: 1rem;
 }
+.trajetoria .area-profissional .area-profissional-view .area-profissional-carr .ainda-nao-ha-nada-ha-colocar {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  min-width: 290px;
+  max-width: 290px;
+}
+.trajetoria .area-profissional .area-profissional-view .area-profissional-carr .ainda-nao-ha-nada-ha-colocar .texto-vaga p {
+  color: var(--cor-texto);
+  font-weight: 800;
+}
+.trajetoria .area-profissional .area-profissional-view .area-profissional-carr .ainda-nao-ha-nada-ha-colocar .texto-vaga p span {
+  color: var(--cor-principal);
+}
 .trajetoria .area-profissional .area-profissional-view .area-profissional-carr .profissional-item {
+  display: none;
   padding: 0.8rem;
   min-width: 280px;
   max-width: 280px;
@@ -1049,6 +1072,10 @@ header .nav-pc {
   cursor: pointer;
   transition: 0.5s;
 }
+.contato .me-contate .wpp a {
+  text-decoration: none;
+  color: var(--cor-principal);
+}
 .contato .me-contate .wpp:hover {
   opacity: 1;
 }
@@ -1060,8 +1087,18 @@ header .nav-pc {
   opacity: 0.5;
 }
 .contato .me-contate .email .copia-email h6 {
+  position: relative;
   font-size: 1.2rem;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.contato .me-contate .email .copia-email h6 span {
+  font-size: 0.8rem;
+  color: green;
+  transition: 1s;
+  opacity: 0;
 }
 .contato .me-contate .email .copia-email p {
   font-size: 1.1rem;
@@ -1116,6 +1153,9 @@ footer .links .nav-mob-item i {
 }
 footer .links .nav-mob-item .linkedin {
   padding: 0.3rem calc(0.3rem + 4px);
+}
+footer .links .nav-mob-item:hover {
+  opacity: 1;
 }
 footer p {
   color: var(--cor-texto);

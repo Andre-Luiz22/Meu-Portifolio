@@ -1,4 +1,7 @@
-mudaTema = document.getElementById("checkbox");
+var mudaTema = document.getElementById("checkbox");
+var copiaEmail = document.getElementById("copia-email");
+var textoCopiado = document.getElementById("texto-copiado");
+var voltaTopo = document.getElementById("volta-topo");
 
 mudaTema.addEventListener("change", () => {
   console.log("mudou");
@@ -52,3 +55,18 @@ function trocaTema() {
   mudaCorPrincipalOpaca(principalColorOpaca);
   mudaCorTexto(textColor);
 }
+
+function opacidadeCopiaTexto() {
+  textoCopiado.style.opacity = "1";
+  setInterval(() => {
+    textoCopiado.style.opacity = "0";
+  }, 2000);
+}
+copiaEmail.addEventListener("click", () => {
+  navigator.clipboard.writeText("andreluiz01bhz@gmail.com");
+  opacidadeCopiaTexto();
+});
+
+voltaTopo.addEventListener("click", () => {
+  window.scrollTo(0, 0);
+});

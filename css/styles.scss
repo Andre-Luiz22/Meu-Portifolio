@@ -312,6 +312,9 @@ header {
       .linkedin {
         padding: 0.3rem calc(0.3rem + 4px);
       }
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 
@@ -462,6 +465,11 @@ header {
     }
 
     .wpp {
+      a {
+        text-decoration: none;
+        color: var(--cor-principal);
+      }
+
       opacity: 0.5;
       padding: 0.5rem;
       border: 1px solid var(--cor-principal);
@@ -1062,7 +1070,27 @@ header {
         display: flex;
         gap: 1rem;
 
+        .ainda-nao-ha-nada-ha-colocar {
+          font-family: "Raleway", sans-serif;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          min-width: 290px;
+          max-width: 290px;
+          .texto-vaga {
+            p {
+              color: var(--cor-texto);
+              font-weight: 800;
+
+              span {
+                color: var(--cor-principal);
+              }
+            }
+          }
+        }
+
         .profissional-item {
+          display: none;
           padding: 0.8rem;
           min-width: 280px;
           max-width: 280px;
@@ -1221,6 +1249,10 @@ header {
     flex-direction: column;
     gap: 2rem;
     .wpp {
+      a {
+        text-decoration: none;
+        color: var(--cor-principal);
+      }
       width: fit-content;
       color: var(--cor-principal);
       opacity: 0.5;
@@ -1242,8 +1274,18 @@ header {
       }
       .copia-email {
         h6 {
+          position: relative;
           font-size: 1.2rem;
           font-weight: 700;
+          display: flex;
+          align-items: center;
+          gap: 0.6rem;
+          span {
+            font-size: 0.8rem;
+            color: green;
+            transition: 1s;
+            opacity: 0;
+          }
         }
 
         p {
@@ -1300,6 +1342,10 @@ footer {
       }
       .linkedin {
         padding: 0.3rem calc(0.3rem + 4px);
+      }
+
+      &:hover {
+        opacity: 1;
       }
     }
   }
