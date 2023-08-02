@@ -909,6 +909,8 @@ header .nav-pc {
   text-align: center;
   min-width: 290px;
   max-width: 290px;
+  border: 1px solid var(--cor-principal);
+  border-radius: 10px;
 }
 .trajetoria .area-profissional .area-profissional-view .area-profissional-carr .ainda-nao-ha-nada-ha-colocar .texto-vaga p {
   color: var(--cor-texto);

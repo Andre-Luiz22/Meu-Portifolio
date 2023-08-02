@@ -1077,6 +1077,8 @@ header {
           text-align: center;
           min-width: 290px;
           max-width: 290px;
+          border: 1px solid var(--cor-principal);
+          border-radius: 10px;
           .texto-vaga {
             p {
               color: var(--cor-texto);

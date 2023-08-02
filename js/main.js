@@ -60,7 +60,7 @@ function opacidadeCopiaTexto() {
   textoCopiado.style.opacity = "1";
   setInterval(() => {
     textoCopiado.style.opacity = "0";
-  }, 2000);
+  }, 3000);
 }
 copiaEmail.addEventListener("click", () => {
   navigator.clipboard.writeText("andreluiz01bhz@gmail.com");
