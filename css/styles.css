@@ -652,6 +652,8 @@ header .nav-pc {
   color: var(--cor-texto);
 }
 .portfolio-container .titulo-portfolio .projetos-trabalhos h2 {
+  display: flex;
+  flex-direction: column;
   font-weight: 800;
   font-size: 2rem;
 }
@@ -807,6 +809,8 @@ header .nav-pc {
 .habilidades .titulo-habilidades .tecnologias-habilidades h2 {
   font-weight: 800;
   font-size: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 .habilidades .linguagens {
   color: var(--cor-texto);
@@ -913,6 +917,8 @@ header .nav-pc {
 }
 .trajetoria .titulo-trajetoria .trajetoria-ate-aqui h2 {
   font-weight: 800;
+  display: flex;
+  flex-direction: column;
   font-size: 2rem;
 }
 .trajetoria .area-profissional {
@@ -1095,6 +1101,8 @@ header .nav-pc {
   color: var(--cor-texto);
 }
 .contato .titulo-contato .entre-em-contato h2 {
+  display: flex;
+  flex-direction: column;
   font-weight: 800;
   font-size: 2rem;
 }
@@ -1103,7 +1111,12 @@ header .nav-pc {
   flex-direction: column;
   gap: 2rem;
 }
-.contato .me-contate .wpp {
+.contato .me-contate .me-contate-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.contato .me-contate .me-contate-container .wpp {
   width: -moz-fit-content;
   width: fit-content;
   color: var(--cor-principal);
@@ -1114,21 +1127,21 @@ header .nav-pc {
   cursor: pointer;
   transition: 0.5s;
 }
-.contato .me-contate .wpp a {
+.contato .me-contate .me-contate-container .wpp a {
   text-decoration: none;
   color: var(--cor-principal);
 }
-.contato .me-contate .wpp:hover {
+.contato .me-contate .me-contate-container .wpp:hover {
   opacity: 1;
 }
-.contato .me-contate .email {
+.contato .me-contate .me-contate-container .email {
   color: var(--cor-principal);
 }
-.contato .me-contate .email i {
+.contato .me-contate .me-contate-container .email i {
   font-size: 1.7rem;
   opacity: 0.5;
 }
-.contato .me-contate .email .copia-email h6 {
+.contato .me-contate .me-contate-container .email .copia-email h6 {
   position: relative;
   font-size: 1.2rem;
   font-weight: 700;
@@ -1136,21 +1149,22 @@ header .nav-pc {
   align-items: center;
   gap: 0.6rem;
 }
-.contato .me-contate .email .copia-email h6 span {
+.contato .me-contate .me-contate-container .email .copia-email h6 span {
   font-size: 0.8rem;
   color: green;
   transition: 1s;
   opacity: 0;
 }
-.contato .me-contate .email .copia-email p {
+.contato .me-contate .me-contate-container .email .copia-email p {
   font-size: 1.1rem;
   color: var(--cor-texto);
 }
-.contato .me-contate .email .copia-email p i {
+.contato .me-contate .me-contate-container .email .copia-email p i {
   color: var(--cor-principal);
   opacity: 0.5;
+  cursor: pointer;
 }
-.contato .me-contate .email .copia-email p i:hover {
+.contato .me-contate .me-contate-container .email .copia-email p i:hover {
   opacity: 1;
 }
 .contato .me-contate .voltar-topo {
@@ -1161,6 +1175,7 @@ header .nav-pc {
   align-items: center;
   gap: 1rem;
   opacity: 0.5;
+  cursor: pointer;
 }
 .contato .me-contate .voltar-topo span {
   font-weight: 700;
@@ -1223,32 +1238,90 @@ footer p {
   .experiencia .horizontal-xp-tablet {
     display: flex;
   }
+  .portfolio-container .titulo-portfolio {
+    align-items: center;
+  }
+  .portfolio-container .titulo-portfolio .projetos-trabalhos h2 {
+    text-align: center;
+    gap: 0.5rem;
+    flex-direction: row;
+  }
   .filtro-carr {
     align-self: flex-end;
   }
-  .linguagens {
+  .habilidades .titulo-habilidades {
+    display: flex;
     align-items: center;
   }
-  .linguagens .conheco {
+  .habilidades .titulo-habilidades .tecnologias-habilidades h2 {
+    text-align: center;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  .habilidades .linguagens {
     align-items: center;
   }
-  .linguagens .vou-aprender {
+  .habilidades .linguagens .conheco {
     align-items: center;
+  }
+  .habilidades .linguagens .vou-aprender {
+    align-items: center;
+  }
+  .trajetoria .titulo-trajetoria {
+    align-items: center;
+  }
+  .trajetoria .titulo-trajetoria .trajetoria-ate-aqui h2 {
+    text-align: center;
+    flex-direction: row;
+    gap: 0.5rem;
   }
   .trajetoria .trajetoria-container {
     display: flex;
     justify-content: center;
-    gap: 5%;
+    gap: 3%;
   }
-  .trajetoria .trajetoria-container .area-profissional-carr {
+  .trajetoria .trajetoria-container .area-profissional {
+    align-items: center;
+    width: 50%;
+  }
+  .trajetoria .trajetoria-container .area-profissional .area-profissional-carr {
+    align-items: center;
     flex-direction: column;
   }
-  .trajetoria .trajetoria-container .area-academica-view {
+  .trajetoria .trajetoria-container .area-profissional .area-profissional-carr .ainda-nao-ha-nada-ha-colocar,
+  .trajetoria .trajetoria-container .area-profissional .area-profissional-carr .profissional-item {
+    min-width: 60%;
+  }
+  .trajetoria .trajetoria-container .area-academica {
+    align-items: center;
+    width: 50%;
+  }
+  .trajetoria .trajetoria-container .area-academica .area-academica-view {
     overflow-y: auto;
     height: 500px;
   }
-  .trajetoria .trajetoria-container .area-academica-view .area-academica-carr {
+  .trajetoria .trajetoria-container .area-academica .area-academica-view .area-academica-carr {
+    align-items: center;
     flex-direction: column;
+  }
+  .trajetoria .trajetoria-container .area-academica .area-academica-view .area-academica-carr .academico-item {
+    min-width: 60%;
+  }
+  .contato .titulo-contato {
+    align-items: center;
+  }
+  .contato .titulo-contato .entre-em-contato h2 {
+    flex-direction: row;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  .contato .me-contate {
+    align-items: center;
+  }
+  .contato .me-contate .me-contate-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 940px) {

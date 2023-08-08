@@ -804,6 +804,8 @@ header {
     .projetos-trabalhos {
       color: var(--cor-texto);
       h2 {
+        display: flex;
+        flex-direction: column;
         font-weight: 800;
         font-size: 2rem;
       }
@@ -976,6 +978,8 @@ header {
       h2 {
         font-weight: 800;
         font-size: 2rem;
+        display: flex;
+        flex-direction: column;
       }
     }
   }
@@ -1084,6 +1088,8 @@ header {
       color: var(--cor-texto);
       h2 {
         font-weight: 800;
+        display: flex;
+        flex-direction: column;
         font-size: 2rem;
       }
     }
@@ -1287,6 +1293,8 @@ header {
     .entre-em-contato {
       color: var(--cor-texto);
       h2 {
+        display: flex;
+        flex-direction: column;
         font-weight: 800;
         font-size: 2rem;
       }
@@ -1297,54 +1305,60 @@ header {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    .wpp {
-      a {
-        text-decoration: none;
-        color: var(--cor-principal);
-      }
-      width: fit-content;
-      color: var(--cor-principal);
-      opacity: 0.5;
-      padding: 0.5rem;
-      border: 1px solid var(--cor-principal);
-      border-radius: 7px;
-      cursor: pointer;
-      transition: 0.5s;
-      &:hover {
-        opacity: 1;
-      }
-    }
-
-    .email {
-      color: var(--cor-principal);
-      i {
-        font-size: 1.7rem;
-        opacity: 0.5;
-      }
-      .copia-email {
-        h6 {
-          position: relative;
-          font-size: 1.2rem;
-          font-weight: 700;
-          display: flex;
-          align-items: center;
-          gap: 0.6rem;
-          span {
-            font-size: 0.8rem;
-            color: green;
-            transition: 1s;
-            opacity: 0;
-          }
+    .me-contate-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      .wpp {
+        a {
+          text-decoration: none;
+          color: var(--cor-principal);
         }
+        width: fit-content;
+        color: var(--cor-principal);
+        opacity: 0.5;
+        padding: 0.5rem;
+        border: 1px solid var(--cor-principal);
+        border-radius: 7px;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover {
+          opacity: 1;
+        }
+      }
 
-        p {
-          font-size: 1.1rem;
-          color: var(--cor-texto);
-          i {
-            color: var(--cor-principal);
-            opacity: 0.5;
-            &:hover {
-              opacity: 1;
+      .email {
+        color: var(--cor-principal);
+        i {
+          font-size: 1.7rem;
+          opacity: 0.5;
+        }
+        .copia-email {
+          h6 {
+            position: relative;
+            font-size: 1.2rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            span {
+              font-size: 0.8rem;
+              color: green;
+              transition: 1s;
+              opacity: 0;
+            }
+          }
+
+          p {
+            font-size: 1.1rem;
+            color: var(--cor-texto);
+            i {
+              color: var(--cor-principal);
+              opacity: 0.5;
+              cursor: pointer;
+              &:hover {
+                opacity: 1;
+              }
             }
           }
         }
@@ -1357,6 +1371,7 @@ header {
       align-items: center;
       gap: 1rem;
       opacity: 0.5;
+      cursor: pointer;
       span {
         font-weight: 700;
       }
@@ -1428,34 +1443,104 @@ footer {
       display: flex;
     }
   }
-
+  .portfolio-container {
+    .titulo-portfolio {
+      align-items: center;
+      .projetos-trabalhos {
+        h2 {
+          text-align: center;
+          gap: 0.5rem;
+          flex-direction: row;
+        }
+      }
+    }
+  }
   .filtro-carr {
     align-self: flex-end;
   }
-
-  .linguagens {
-    align-items: center;
-    .conheco {
+  .habilidades {
+    .titulo-habilidades {
+      display: flex;
       align-items: center;
+      .tecnologias-habilidades {
+        h2 {
+          text-align: center;
+          flex-direction: row;
+          gap: 0.5rem;
+        }
+      }
     }
-    .vou-aprender {
+    .linguagens {
       align-items: center;
+      .conheco {
+        align-items: center;
+      }
+      .vou-aprender {
+        align-items: center;
+      }
     }
   }
   .trajetoria {
+    .titulo-trajetoria {
+      align-items: center;
+      .trajetoria-ate-aqui {
+        h2 {
+          text-align: center;
+          flex-direction: row;
+          gap: 0.5rem;
+        }
+      }
+    }
     .trajetoria-container {
       display: flex;
       justify-content: center;
-      gap: 5%;
-      .area-profissional-carr {
-        flex-direction: column;
-      }
-      .area-academica-view {
-        overflow-y: auto;
-        height: 500px;
-        .area-academica-carr {
+      gap: 3%;
+      .area-profissional {
+        align-items: center;
+        width: 50%;
+        .area-profissional-carr {
+          align-items: center;
           flex-direction: column;
+          .ainda-nao-ha-nada-ha-colocar,
+          .profissional-item {
+            min-width: 60%;
+          }
         }
+      }
+      .area-academica {
+        align-items: center;
+        width: 50%;
+        .area-academica-view {
+          overflow-y: auto;
+          height: 500px;
+          .area-academica-carr {
+            align-items: center;
+            flex-direction: column;
+            .academico-item {
+              min-width: 60%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .contato {
+    .titulo-contato {
+      align-items: center;
+      .entre-em-contato {
+        h2 {
+          flex-direction: row;
+          text-align: center;
+          gap: 0.5rem;
+        }
+      }
+    }
+    .me-contate {
+      align-items: center;
+      .me-contate-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
       }
     }
   }
