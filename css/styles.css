@@ -213,22 +213,31 @@ header .nav-mobile .nav-mob-item .linkedin {
 header .nav-mobile .nav-mob-item:hover {
   opacity: 1;
 }
-header .nav-pc {
-  display: none;
-}
 
 /*Fim da estilização do header*/
 /*Início da estilização do container do avatar*/
-.container-avatar {
+.avatar-saudacao {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.avatar-saudacao .container-avatar {
   margin: 0 15px;
   position: relative;
   display: flex;
+  align-self: center;
   justify-content: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
   margin: 1.5rem 0;
+  gap: 1rem;
 }
-.container-avatar .circulo {
-  width: 220px;
-  height: 220px;
+.avatar-saudacao .container-avatar .circulo {
+  width: 20vw;
+  height: 20vw;
+  min-width: 220px;
+  min-height: 220px;
   position: absolute;
   top: 0;
   background-color: var(--cor-principal);
@@ -238,7 +247,7 @@ header .nav-pc {
   z-index: 1;
   animation: gira-roda-avatar linear 30s 0s infinite;
 }
-.container-avatar .circulo .item-avatar {
+.avatar-saudacao .container-avatar .circulo .item-avatar {
   background-color: var(--background-color);
   display: inline-block;
   padding: 0.4rem 0.5rem;
@@ -246,50 +255,52 @@ header .nav-pc {
   border-radius: 50%;
   opacity: 1;
 }
-.container-avatar .circulo .item-avatar i {
+.avatar-saudacao .container-avatar .circulo .item-avatar i {
   color: var(--cor-principal);
   font-size: 1.5rem;
 }
-.container-avatar .circulo .python {
+.avatar-saudacao .container-avatar .circulo .python {
   right: -12px;
   top: 50%;
 }
-.container-avatar .circulo .js {
+.avatar-saudacao .container-avatar .circulo .js {
   top: 0px;
   right: 25%;
 }
-.container-avatar .circulo .css {
+.avatar-saudacao .container-avatar .circulo .css {
   bottom: 10%;
   left: 0;
   padding: 0.4rem 0.6rem;
 }
-.container-avatar .circulo .html {
+.avatar-saudacao .container-avatar .circulo .html {
   top: 15%;
   left: 10%;
   padding: 0.4rem 0.6rem;
 }
-.container-avatar .circulo .git {
+.avatar-saudacao .container-avatar .circulo .git {
   bottom: 0;
   right: 16px;
 }
-.container-avatar .avatar {
+.avatar-saudacao .container-avatar .avatar {
   display: flex;
   justify-content: center;
   z-index: 3;
+  width: 25vw;
+  min-width: 300px;
 }
-.container-avatar .avatar img {
+.avatar-saudacao .container-avatar .avatar img {
   width: 60%;
   border-bottom-left-radius: 3rem;
   border-bottom-right-radius: 3rem;
 }
-
-.section-saudacao {
+.avatar-saudacao .container-saudacao {
   margin: 0 15px;
   display: flex;
   flex-direction: column;
+  align-self: flex-start;
   font-family: "Raleway", sans-serif;
 }
-.section-saudacao .txt-saudacao {
+.avatar-saudacao .container-saudacao .txt-saudacao {
   color: var(--cor-principal);
   background-color: var(--cor-principal-opacidade);
   width: -moz-fit-content;
@@ -302,26 +313,26 @@ header .nav-pc {
   border: 1px solid var(--cor-principal);
   border-radius: 0.3rem;
 }
-.section-saudacao .txt-saudacao i {
+.avatar-saudacao .container-saudacao .txt-saudacao i {
   font-size: 1.3rem;
   text-shadow: 0px 0px 3px var(--cor-principal);
 }
-.section-saudacao .txt-saudacao h6 {
+.avatar-saudacao .container-saudacao .txt-saudacao h6 {
   font-size: 1rem;
   font-weight: 900;
 }
-.section-saudacao .nome-saudacao h1 {
+.avatar-saudacao .container-saudacao .nome-saudacao h1 {
   color: var(--cor-texto);
   font-weight: 800;
   font-size: 2.7rem;
 }
-.section-saudacao .area-atuacao h3 {
+.avatar-saudacao .container-saudacao .area-atuacao h3 {
   font-size: 1.2rem;
   color: var(--cor-texto);
   opacity: 0.5;
   font-weight: 400;
 }
-.section-saudacao .baixa-cv_wpp {
+.avatar-saudacao .container-saudacao .baixa-cv_wpp {
   margin-top: 1.5rem;
   display: flex;
   color: #7b4ae2;
@@ -331,15 +342,15 @@ header .nav-pc {
   flex-wrap: wrap;
   gap: 1rem;
 }
-.section-saudacao .baixa-cv_wpp .baixa-cv {
+.avatar-saudacao .container-saudacao .baixa-cv_wpp .baixa-cv {
   opacity: 0.5;
   cursor: pointer;
   transition: 0.5s;
 }
-.section-saudacao .baixa-cv_wpp .baixa-cv:hover {
+.avatar-saudacao .container-saudacao .baixa-cv_wpp .baixa-cv:hover {
   opacity: 1;
 }
-.section-saudacao .baixa-cv_wpp .wpp {
+.avatar-saudacao .container-saudacao .baixa-cv_wpp .wpp {
   opacity: 0.5;
   padding: 0.5rem;
   border: 1px solid var(--cor-principal);
@@ -347,16 +358,51 @@ header .nav-pc {
   cursor: pointer;
   transition: 0.5s;
 }
-.section-saudacao .baixa-cv_wpp .wpp a {
+.avatar-saudacao .container-saudacao .baixa-cv_wpp .wpp a {
   text-decoration: none;
   color: var(--cor-principal);
 }
-.section-saudacao .baixa-cv_wpp .wpp:hover {
+.avatar-saudacao .container-saudacao .baixa-cv_wpp .wpp:hover {
+  opacity: 1;
+}
+.avatar-saudacao .baixacv-wpp-pc {
+  font-family: "Raleway", sans-serif;
+  margin-top: 1.5rem;
+  margin-right: 0 15px;
+  display: none;
+  color: #7b4ae2;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.98rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.avatar-saudacao .baixacv-wpp-pc .baixa-cv {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.avatar-saudacao .baixacv-wpp-pc .baixa-cv:hover {
+  opacity: 1;
+}
+.avatar-saudacao .baixacv-wpp-pc .wpp {
+  opacity: 0.5;
+  padding: 0.5rem;
+  border: 1px solid var(--cor-principal);
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.avatar-saudacao .baixacv-wpp-pc .wpp a {
+  text-decoration: none;
+  color: var(--cor-principal);
+}
+.avatar-saudacao .baixacv-wpp-pc .wpp:hover {
   opacity: 1;
 }
 
 .experiencia {
-  margin: 4rem 15px;
+  margin: 5rem 15px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -1278,23 +1324,23 @@ footer p {
   .trajetoria .trajetoria-container {
     display: flex;
     justify-content: center;
-    gap: 3%;
+    gap: 5%;
   }
   .trajetoria .trajetoria-container .area-profissional {
     align-items: center;
-    width: 50%;
+    width: 45%;
   }
-  .trajetoria .trajetoria-container .area-profissional .area-profissional-carr {
+  .trajetoria .trajetoria-container .area-profissional .area-profissional-view .area-profissional-carr {
     align-items: center;
     flex-direction: column;
   }
-  .trajetoria .trajetoria-container .area-profissional .area-profissional-carr .ainda-nao-ha-nada-ha-colocar,
-  .trajetoria .trajetoria-container .area-profissional .area-profissional-carr .profissional-item {
-    min-width: 60%;
+  .trajetoria .trajetoria-container .area-profissional .area-profissional-view .area-profissional-carr .ainda-nao-ha-nada-ha-colocar,
+  .trajetoria .trajetoria-container .area-profissional .area-profissional-view .area-profissional-carr .profissional-item {
+    min-width: 80%;
   }
   .trajetoria .trajetoria-container .area-academica {
     align-items: center;
-    width: 50%;
+    width: 45%;
   }
   .trajetoria .trajetoria-container .area-academica .area-academica-view {
     overflow-y: auto;
@@ -1305,7 +1351,7 @@ footer p {
     flex-direction: column;
   }
   .trajetoria .trajetoria-container .area-academica .area-academica-view .area-academica-carr .academico-item {
-    min-width: 60%;
+    min-width: 80%;
   }
   .contato .titulo-contato {
     align-items: center;
@@ -1325,6 +1371,28 @@ footer p {
   }
 }
 @media screen and (min-width: 940px) {
+  .avatar-saudacao {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .avatar-saudacao .container-avatar {
+    order: 2;
+  }
+  .avatar-saudacao .container-saudacao {
+    height: -moz-fit-content;
+    height: fit-content;
+    align-self: center;
+  }
+  .avatar-saudacao .container-saudacao .baixa-cv_wpp {
+    display: none;
+  }
+  .avatar-saudacao .baixacv-wpp-pc {
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    order: 3;
+  }
   .sobre-mim {
     display: flex;
     flex-direction: row;
